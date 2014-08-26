@@ -1,79 +1,677 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Flexbox : flexbox 발표자료">
+	<head>
+		<meta charset="utf-8">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+		<title>Flexible Layout</title>
 
-    <title>Flexbox</title>
-  </head>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
 
-  <body>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/korearice/flexbox">View on GitHub</a>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-          <h1 id="project_title">Flexbox</h1>
-          <h2 id="project_tagline">flexbox 발표자료</h2>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+        <link rel="stylesheet" href="css/fullscreen-img.css">
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/korearice/flexbox/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/korearice/flexbox/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+	<body>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<div class="reveal">
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section fullscreen-img="img/img_main.jpg">
+                    <div style="padding:1.2em 0.5em 0.5em;background:rgba(255,255,255,0.75)">
+                        <h1 style="font-size:3.5em">Flexible Layout</h1>
+                        <h3>플렉스박스로 할 수 있는것들?</h3>
+                        <p>
+                            <small>Created by <a href="#">UIT개발실</a> / <a href="mailto:kyounghwan.min@nhn.com">MinKyoungHwan</a></small>
+                        </p>
+                        <p style="text-align:right;font-size:0.4em;color:#CC9393">이 발표자료는 크롬브라우저/1280*800 해상도에 최적화 되있습니다</p>
+                    </div>
+				</section>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+				<section>
+                    <p><img src="img/profile.png" alt="" style="width:15%;border:0;border-radius:500px"></p>
+					<pre><code data-trim style="max-height:360px;font-size:1.3em;line-height:1.3em">
+#speaker {
+    Name      : 민경환 대리
+    Team      : UIT 개발실
+    E-mail    : kyounghwan.min@nhn.com
+    Project   : 네이버 포스트, 스마트에디터, 'webkit 사전' 서적 집필중
+}
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+#speaker:description {
+    content : '만나서 반가워요 :)’
+}
+					</code></pre>
+				</section>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+				<!-- Example of nested vertical slides -->
+				<section>
+                    <h3 style="margin:0.8em 0 0.5em">레이아웃을 만든다는것은?</h3>
+                    <img src="img/img_building2.jpg" width="40%" style="border:none;border-radius:15px" alt="">
+				</section>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+				<section>
+                    <p><img src="img/img_order.jpg" width="40%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+					<ul style="margin:0 50px">
+						<li>3단 레이아웃에 가운데 정렬로 해주세요. 네이버 메인처럼...</li>
+						<li>푸터는 항상 하단에 고정시켜주시구요</li>
+						<li>좌측 메뉴의 너비값은 20%인데 해상도가 1000px이상이면<br>200px로 고정시켜주세요.</li>
+						<li style="color:#ccc">...</li>
+					</ul>
+				</section>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                    <section>
+                        <h3>CSS 2.1</h3>
+                        <ul style="margin-top:0.5em;font-family:monospace">
+                            <li>Grid Layout</li>
+                            <li>float:left; position:absolute;</li>
+                            <li>display:inline-block; display:table-cell;</li>
+                            <li>JavaScript</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+                    <section>
+                        <p><img src="img/img_devices2.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3 style="margin-top:0.5em">다양한 환경에 최적화 되는 UI</h3>
+                        <ul style="margin-top:0.5em">
+                            <li>모바일에선 박스가 좌측, 태블릿에선 우측 상단에 붙어야해요...</li>
+                            <li>텍스트 길이에 맞춰 박스가 늘어날 순 없을까요?</li>
+                            <li>성능최적화 좀 해주시구요...</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+                    <section>
+                        <p><img src="img/img_ux.jpg" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3 style="margin-top:0.5em">혁신적인 UI</h3>
+                        <ul style="margin-top:0.5em">
+                            <li>단순하면서 임팩트 있고 좀 고급스러워보였으면 좋겠어요...</li>
+                            <li>웹표준, 웹접근성은 기본인거 아시죠?</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Flexbox maintained by <a href="https://github.com/korearice">korearice</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+				<section>
+                    <section>
+                        <p class="fragment">레이아웃은 더 다양한 환경에 최적화되야 한다</p>
+                        <p class="fragment" style="margin-top:1em">레이아웃이 좀더 유연할 순 없을까?</p>
+                        <h3 class="fragment" style="margin-top:1em;line-height:1.5">CSS3.0 플렉스박스는<br>새로운 개념의 레이아웃을 제공합니다</h3>
+                    </section>
 
-    
+                    <section>
+                        <p><img src="img/img_css3_1.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
 
-  </body>
+                    <section>
+                        <div class="flexbox_roadmap_wrap">
+                            <div class="flexbox_roadmap">
+                                <span style="background:#F18C24"><em>2009/07/23</em><span>display:box</span></span>
+                                <span><em>2011/03/22</em></span>
+                                <span><em>2011/11/29</em></span>
+                                <span style="background:#F18C24"><em>2012/03/22</em><span>display:flexbox</span></span>
+                                <span style="background:#F18C24"><em>2012/06/12</em><span>display:flex</span></span>
+                                <span><em>2012/09/18</em></span>
+                                <span><em>2014/03/25</em></span>
+                            </div>
+                        </div>
+<style>
+.flexbox_roadmap_wrap{width:20em;margin:0 auto!important}
+.flexbox_roadmap{display:flex;flex-direction:column;justify-content:space-around;width:.5em;height:18em;background:#2D4159}
+.flexbox_roadmap > span{position:relative;width:1.2em;height:1.2em;margin-left:-0.4em;background:#61B0FF;border-radius:50px}
+.flexbox_roadmap > span span{position:absolute;top:0;left:10em;font-family:monospace;color:#A52127}
+.flexbox_roadmap em{display:inline-block;margin-left:2em;color:#444}
+</style>
+                    </section>
+				</section>
+
+                <section>
+                    <section>
+                        <p><img src="img/img_capture2.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_tree2.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_flexbox_pagelayout.png" width="60%" style="border:none;box-shadow:none" alt=""></p>
+                        <p>페이지 레이아웃을 플렉스박스로 만드는건 안좋을 수 있다</p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_three.jpg" width="50%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>플렉스박스 장점 3가지</h3>
+                        <ul>
+                        <li>Available space</li>
+                        <li>Alignment</li>
+                        <li>Order</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_space.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Available space</h3>
+                        <p>활용할 수 있는 공간을 자동으로 계산합니다</p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_align.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Alignment</h3>
+                        <p>요소들의 정렬을 손쉽게 설정할 수 있습니다</p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_order.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Order</h3>
+                        <p>요소들의 배치 순서를 정할 수 있습니다</p>
+                    </section>
+
+                    <section>
+                        <h3 style="font-family:monospace">display:flex</h3>
+                        <div class="sample_flexbox_wrap" style="margin:1.2em 20px 0">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                        <p style="margin-top:1.2em">플렉스박스는 컨테이너 태그와 아이템 태그로 나뉩니다</p>
+<style>
+.sample_flexbox_wrap{display:flex;height:10em;padding:0.9em!important;border:0.5em solid #000!important}
+.sample_flexbox_wrap > div{display:flex;align-items:center;justify-content:center;flex:1;margin-left:0.7em!important;border:0.2em solid #929292;font-size:2em}
+.sample_flexbox_wrap > div:first-child{margin-left:0!important}
+</style>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_tree.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode1">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode1_1">HTML</label>
+                        <label for="liveCode1_2">CSS</label>
+                        <input type="radio" name="liveCode1" id="liveCode1_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode1" contenteditable>&lt;ul&gt;
+  &lt;li&gt;I'm First&lt;/li&gt;
+  &lt;li&gt;I'm Second&lt;/li&gt;
+  &lt;li&gt;I'm Third&lt;/li&gt;
+  &lt;li&gt;I'm Fourth&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode1" id="liveCode1_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode1" contenteditable>ul{}</code></pre>
+                        </div>
+                        </div>
+<style>
+#liveCode1 li{padding:10px;list-style:none;margin-bottom:10px;text-align:center} 
+#liveCode1 li:nth-child(1){border:0.2em solid #222}
+#liveCode1 li:nth-child(2){border:0.2em solid #444}
+#liveCode1 li:nth-child(3){border:0.2em solid #666}
+#liveCode1 li:nth-child(4){border:0.2em solid #888}
+</style>
+                    </section>
+
+                    <section>
+                        <h3>추천 사이트</h3>
+                        <p style="margin-top:1.5em">CSS Trick : <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">http://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+                        <p style="margin-top:1.2em">Stephen Hay : <a href="http://www.slideshare.net/stephenhay/flexbox-one-giant-leap-for-web-layout-brea-2013" target="_blank">http://www.slideshare.net/stephenhay/flexbox-one-giant-leap-for-web-layout-brea-2013</a></p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3 style="margin-bottom:30px">1. 내비게이션</h3>
+                    </section>
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode2">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode2_1">HTML</label>
+                        <label for="liveCode2_2">CSS</label>
+                        <input type="radio" name="liveCode2" id="liveCode2_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode2" contenteditable>&lt;ul&gt;
+  &lt;li&gt;intro&lt;/li&gt;
+  &lt;li&gt;business&lt;/li&gt;
+  &lt;li&gt;project&lt;/li&gt;
+  &lt;li&gt;contact us&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode2" id="liveCode2_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode2" data-trim  contenteditable>ul{}</code></pre>
+                        </div>
+                        </div>
+
+<style>
+#liveCode2 ul{
+margin:0;
+padding:0.6em;
+background:#d2d2d2;
+}
+#liveCode2 ul li{
+list-style:none;
+font-size:1.2em;
+line-height:1.5;
+color:#fff;
+text-decoration:none;
+border:1px solid #666;
+background:#444;
+}
+</style>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3 style="margin-bottom:30px">2. 채팅창</h3>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode3">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode3_1">HTML</label>
+                        <label for="liveCode3_2">CSS</label>
+                        <input type="radio" name="liveCode3" id="liveCode3_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode3" contenteditable>&lt;div class=&quot;wrap&quot;&gt;
+  &lt;ol class=&quot;code_sample3&quot;&gt;
+    &lt;li&gt;first!&lt;/li&gt;
+    &lt;li&gt;second!&lt;/li&gt;
+    &lt;li&gt;third!&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;form class=&quot;type_area&quot;&gt;
+    &lt;input placeholder=&quot;Type your message here&quot; size=&quot;50&quot;&gt;
+    &lt;button&gt;submit&lt;/button&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode3" id="liveCode3_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode3" data-trim  contenteditable>div{}</code></pre>
+                        </div>
+                        </div>
+
+<style>
+#liveCode3 ol {
+  list-style-position:inside;
+  margin:0;
+  min-height:135px;
+  padding:10px;
+  border:2px solid #ccc;
+}
+
+#liveCode3 ol li{
+  min-height:45px;
+  line-height:1.2
+}
+
+.type_area {
+  display:block;
+  margin:0!important;
+  padding:5px!important;
+  background:#ccc;
+  text-align:left;
+  font-size:0!important;
+  line-height:0!important;
+}
+
+.type_area input {
+  height:40px;
+  font-size:18px;
+}
+</style>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>3. 접힘/펼침메뉴</h3>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode4">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode4_1">HTML</label>
+                        <label for="liveCode4_2">CSS</label>
+                        <input type="radio" name="liveCode4" id="liveCode4_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode4" contenteditable>&lt;div&gt;
+  &lt;article&gt;flex menu&lt;/article&gt;
+  &lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;1depth
+    &lt;ul&gt;
+      &lt;li&gt;menu 1-1&lt;/li&gt;
+      &lt;li&gt;menu 1-2&lt;/li&gt;
+      &lt;li&gt;menu 1-3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;2depth
+    &lt;ul&gt;
+      &lt;li&gt;menu 2-1&lt;/li&gt;
+      &lt;li&gt;menu 2-2&lt;/li&gt;
+      &lt;li&gt;menu 2-3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;3depth
+    &lt;ul&gt;
+      &lt;li&gt;I am menu 3-1&lt;/li&gt;
+      &lt;li&gt;I am menu 3-2&lt;/li&gt;
+      &lt;li&gt;I am menu 3-3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode4" id="liveCode4_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode4" data-trim  contenteditable>div{}</code></pre>
+                        </div>
+                        </div>
+
+<style>
+#liveCode4 div {
+  overflow:hidden;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:4px;
+  box-shadow:#444 4px 4px;
+}
+
+#liveCode4 article {
+  font-size:1em;
+}
+
+#liveCode4 li {
+  margin:4px 0;
+  padding:2px 5px;
+  list-style:none;
+  border-radius:4px;
+  text-align:center;
+  font-size:1em;
+}
+
+#liveCode4 .nav {
+  display:block;
+  border-radius:4px;
+  background:#222;
+  padding:1px 4px;
+}
+
+#liveCode4 .nav > li {
+  background:#ccc;
+}
+
+#liveCode4 .nav ul {
+  background:#222;
+  border-radius:4px;
+  color:#fff;
+}
+</style>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>4. 페이지 레이아웃</h3>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode5">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode5_1">HTML</label>
+                        <label for="liveCode5_2">CSS</label>
+                        <input type="radio" name="liveCode5" id="liveCode5_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode5" contenteditable>&lt;div class=&quot;wrap&quot;&gt;
+  &lt;header&gt;1. header&lt;/header&gt;
+  &lt;div&gt;
+    &lt;article&gt;2. main&lt;/article&gt;
+    &lt;nav&gt;3. nav&lt;/nav&gt;
+    &lt;aside&gt;4. aside&lt;/aside&gt;
+  &lt;/div&gt;
+  &lt;footer&gt;5. footer&lt;/footer&gt;
+&lt;/section&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode5" id="liveCode5_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode5" data-trim  contenteditable>.wrap{}</code></pre>
+                        </div>
+                        </div>
+
+<style>
+#liveCode5{background:#ccc}
+#liveCode5 .wrap{font-size:0.5em}
+#liveCode5 header,#liveCode5 footer,#liveCode5 .wrap div > * {
+  padding:15px;
+  margin:10px;
+  border-radius:4px;
+  background:#666;
+  font-size:1.5em;
+  color:#fff;
+}
+</style>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>5. 데이터 테이블 소팅</h3>
+                    </section>
+
+                    <section>
+                        <iframe src="sorting.html" frameborder="0" width="100%" height="600" marginwidth="0" marginheight="0" scrolling="yes"></iframe>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <p>플렉스박스를 더욱 풍부하게 쓰려면?</p>
+                        <h3 class="fragment visible" style="font-family:monospace">flex-wrap:wrap</h3>
+                    </section>
+
+                    <section>
+                        <p style="font-family:monospace">flex-wrap:nowrap</p>
+                        <div class="sample_flexwrap1">
+                            <div class="item1">A</div>
+                            <div class="item1">B</div>
+                            <div class="item1">C</div>
+                            <div class="item1">D</div>
+                        </div>
+
+                        <p style="font-family:monospace">flex-wrap:wrap</p>
+                        <div class="sample_flexwrap2">
+                            <div class="item1">一</div>
+                            <div class="item1">二</div>
+                            <div class="item1">三</div>
+                            <div class="item1">四</div>
+                        </div>
+
+                        <p style="font-family:monospace">flex-wrap:wrap-reverse</p>
+                        <div class="sample_flexwrap3">
+                            <div class="item1">四</div>
+                            <div class="item1">三</div>
+                            <div class="item1">二</div>
+                            <div class="item1">一</div>
+                        </div>
+<style>
+div[class^="sample_flexwrap"]{display:flex;margin:10px 20px 30px;padding:10px;background:#444;border-radius:0.3em}
+div[class^="sample_flexwrap"] div{display:flex;align-items:center;justify-content:center;margin-left:10px;background:#888;border-radius:0.3em;color:#fff}
+div[class^="sample_flexwrap"] div:last-child{margin-right:0}
+.sample_flexwrap1{height:70px}
+.sample_flexwrap1 div{flex:1}
+.sample_flexwrap2{height:170px;flex-wrap:wrap}
+.sample_flexwrap2 div{flex-basis:31%}
+.sample_flexwrap2 div:nth-child(4){margin-top:10px;flex-basis:100%}
+.sample_flexwrap3{height:170px;flex-wrap:wrap}
+.sample_flexwrap3 div{flex-basis:31%}
+.sample_flexwrap3 div:nth-child(4){margin-top:10px;flex-basis:100%}
+</style>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_pinterest.png" style="width:50%;border:0;box-shadow:none;border-radius:15px"></p>
+                        <p>Masonry layout?</p>
+                        <p>Usually say <span style="font-size:1.5em">"Pinterest layout"</span></p>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode6">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode6_1">HTML</label>
+                        <label for="liveCode6_2">CSS</label>
+                        <input type="radio" name="liveCode6" id="liveCode6_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode6" contenteditable><div class="flexbox">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+  <div class="item6">6</div>
+  <div class="item7">7</div>
+  <div class="item8">8</div>
+  <div class="item9">9</div>
+  <div class="item10">10</div>
+  <div class="item11">11</div>
+  <div class="item12">12</div>
+  <div class="item13">13</div>
+  <div class="item14">14</div>
+  <div class="item15">15</div>
+  <div class="item16">16</div>
+  <div class="item17">17</div>
+  <div class="item18">18</div>
+  <div class="item19">19</div>
+  <div class="item20">20</div>
+  <div class="item21">21</div>
+  <div class="item22">22</div>
+  <div class="item23">23</div>
+  <div class="item24">24</div>
+  <div class="item25">25</div>
+  <div class="item26">26</div>
+  <div class="item27">27</div>
+  <div class="item28">28</div>
+</div>
+                        </code></pre>
+
+                        <input type="radio" name="liveCode6" id="liveCode6_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode6" data-trim  contenteditable>.flexbox{}</code></pre>
+                        </div>
+                        </div>
+
+<style>
+#liveCode6 .flexbox div{min-height:50px;margin:5px 15px;font-size:20px}
+#liveCode6 .flexbox *:nth-child(odd){background:#27303E;color:#fff}
+#liveCode6 .flexbox *:nth-child(even){background:#7D7D7D;color:#fff}
+#liveCode6 .flexbox *:nth-child(4n-3){background:#FBA100;color:#fff;}
+#liveCode6 .flexbox *:nth-child(4n-2){background:#27303E;color:#fff;}
+#liveCode6 .flexbox *:nth-child(4n-1){background:#01A29A;}
+#liveCode6 .flexbox *:nth-child(4n){background:#7D7D7D;}
+</style>
+                    </section>
+                </section>
+
+                <section>
+                    <p><img src="img/img_caniuse.png" style="border:0;box-shadow:none"></p>
+                </section>
+
+                <section>
+                    <p><img src="img/img_scissors.jpg" width="50%" style="border:0;box-shadow:none;border-radius:15px"></p>
+                    <p>취할것은 취하고 버릴것은 버리자</p>
+                </section>
+
+                <section>
+                    <h3>또 다른 레이아웃 알고리즘</h3>
+                </section>
+
+                <section>
+                    <section>
+                    <p><img src="img/img_grid1.png" style="width:70%;border:0;box-shadow:none"></p>
+                    </section>
+
+                    <section>
+                    <p><img src="img/img_grid2.png" style="width:70%;border:0;box-shadow:none"></p>
+                    </section>
+                </section>
+
+                <section>
+                        <p><img src="img/img_thanks.png" style="border:none;box-shadow:none" alt=""></p>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+                width: '100%',
+                height: '100%',
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'js/fullscreen-img.js' },
+                    { src: 'plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }}
+				]
+			});
+
+		</script>
+
+	</body>
 </html>
