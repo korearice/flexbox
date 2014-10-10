@@ -1889,3 +1889,4 @@ div.code_view ul,div.code_view ol{display:block;margin:0}
 .tab_code pre{visibility:hidden}
 .tab_code input{position:absolute;visibility:hidden;}
 .tab_code input:checked + pre{z-index:15;visibility:visible}
+.img_credit{font-style:italic;font-size:10px!important}
