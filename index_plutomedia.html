@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ko">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Flexible Layout</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+        <link rel="stylesheet" href="css/fullscreen-img.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+window.onload=function(){
+    var UserAgent = navigator.userAgent;
+    if(UserAgent.match(/Chrome/) == null){
+        alert('이 발표자료는 크롬브라우저에 최적화 되있습니다.');
+    }
+}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section fullscreen-img="img/img_main3.jpg">
+                    <div style="padding:1.2em 0.5em 0.5em;background:rgba(255,255,255,0.75)">
+                        <h1 style="font-size:3.5em">Flexible Layout</h1>
+                        <h3>플렉스박스로 할 수 있는것들?</h3>
+                        <p>
+                            <small>Created by <a href="#">UIT개발실</a> / <a href="mailto:kyounghwan.min@nhn.com">MinKyoungHwan</a></small>
+                        </p>
+                        <p style="text-align:right;font-size:0.4em;color:#D72E2B">이 발표자료는 크롬브라우저/1280*800 해상도에 최적화 되있습니다</p>
+                    </div>
+                    <div style="width:17em;margin:0.5em auto;padding:0.5em 0.2em 0.2em;border-radius:15px;background:rgba(0,0,0,0.8);color:#fff">
+                        <p style="font-size:0.4em;line-height:1.5;text-align:left;padding-left:10px;">1. 화면은 방향키로 이동할 수 있습니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;메인 콘텐츠는 방향키 '좌/우(↑/↓)', 서브 콘텐츠는 방향키 '위/아래(↑/↓)'로 이동가능합니다<br>
+                        2. full 화면은 'f'키를 눌러주세요
+                        </p>
+                    </div>
+				</section>
+
+				<section>
+                    <p><img src="img/profile.png" alt="" style="width:15%;border:0;border-radius:500px"></p>
+					<pre><code data-trim style="max-height:360px;font-size:1.3em;line-height:1.3em">
+#speaker {
+    Name      : 민경환 대리
+    Team      : UIT 개발실
+    E-mail    : kyounghwan.min@nhn.com
+    Project   : 네이버 포스트, 스마트에디터, 'webkit 사전' 서적 집필중
+}
+
+#speaker:description {
+    content : '만나서 반가워요 :)’
+}
+					</code></pre>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+                    <h3 style="margin:0.8em 0 0.5em">레이아웃을 만든다는것은?</h3>
+                    <img src="img/img_building2.jpg" width="40%" style="border:none;border-radius:15px" alt="">
+<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/37803129@N00/2436481628/">@yakobusan Jakob Montrasio 孟亚柯</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+				</section>
+
+				<section>
+                    <p><img src="img/img_order.jpg" width="40%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+		    <p class="img_credit" style="margin:-20px 0 20px">Photo Credit: <a href="https://www.flickr.com/photos/12836528@N00/2872535662/">kevin dooley</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+					<ul style="margin:0 50px">
+						<li>3단 레이아웃에 가운데 정렬로 해주세요. 네이버 메인처럼...</li>
+						<li>푸터는 항상 하단에 고정시켜주시구요</li>
+						<li>좌측 메뉴의 너비값은 20%인데 해상도가 1000px이상이면<br>200px로 고정시켜주세요.</li>
+						<li style="color:#ccc">...</li>
+					</ul>
+				</section>
+
+                    <section>
+                        <h3>CSS 2.1</h3>
+                        <ul style="margin-top:0.5em;font-family:monospace">
+                            <li>Grid Layout</li>
+                            <li>float:left; position:absolute;</li>
+                            <li>display:inline-block; display:table-cell;</li>
+                            <li>JavaScript</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_devices2.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+			<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/38869431@N00/12601505044/">juhansonin</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+                        <h3 style="margin-top:0.5em">다양한 환경에 최적화 되는 UI</h3>
+                        <ul style="margin-top:0.5em">
+                            <li>모바일에선 박스가 좌측, 태블릿에선 우측 상단에 붙어야해요...</li>
+                            <li>텍스트 길이에 맞춰 박스가 늘어날 순 없을까요?</li>
+                            <li>성능최적화 좀 해주시구요...</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_ux.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+			<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/38869431@N00/12601505044/">juhansonin</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+                        <h3 style="margin-top:0.5em">혁신적인 UI</h3>
+                        <ul style="margin-top:0.5em">
+                            <li>단순하면서 임팩트 있고 좀 고급스러워보였으면 좋겠어요...</li>
+                            <li>웹표준, 웹접근성은 기본인거 아시죠?</li>
+                            <li style="color:#ccc">...</li>
+                        </ul>
+                    </section>
+
+				<section>
+                    <section>
+                        <p class="fragment">레이아웃은 더 다양한 환경에 최적화되야 한다</p>
+                        <p class="fragment" style="margin-top:1em">레이아웃이 좀더 유연할 순 없을까?</p>
+                        <h3 class="fragment" style="margin-top:1em;line-height:1.5">CSS3.0 플렉스박스는<br>새로운 개념의 레이아웃을 제공합니다</h3>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_css3_1.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <div class="flexbox_roadmap_wrap">
+                            <div class="flexbox_roadmap">
+                                <span style="background:#F18C24"><em>2009/07/23</em><span>display:box</span></span>
+                                <span><em>2011/03/22</em></span>
+                                <span><em>2011/11/29</em></span>
+                                <span style="background:#F18C24"><em>2012/03/22</em><span>display:flexbox</span></span>
+                                <span style="background:#F18C24"><em>2012/06/12</em><span>display:flex</span></span>
+                                <span><em>2012/09/18</em></span>
+                                <span><em>2014/03/25</em></span>
+                            </div>
+                        </div>
+<style>
+.flexbox_roadmap_wrap{width:20em;margin:0 auto!important}
+.flexbox_roadmap{display:flex;flex-direction:column;justify-content:space-around;width:.5em;height:18em;background:#2D4159}
+.flexbox_roadmap > span{position:relative;width:1.2em;height:1.2em;margin-left:-0.4em;background:#61B0FF;border-radius:50px}
+.flexbox_roadmap > span span{position:absolute;top:0;left:10em;font-family:monospace;color:#A52127}
+.flexbox_roadmap em{display:inline-block;margin-left:2em;color:#444}
+</style>
+                    </section>
+				</section>
+
+                <section>
+                    <section>
+                        <p><img src="img/img_capture2.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_three.jpg" width="50%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>플렉스박스 장점 3가지</h3>
+                        <ul>
+                        <li>Available space</li>
+                        <li>Alignment</li>
+                        <li>Order</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_space.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Available space</h3>
+                        <p>활용할 수 있는 공간을 자동으로 계산합니다</p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_align.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Alignment</h3>
+                        <p>요소들의 정렬을 손쉽게 설정할 수 있습니다</p>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_order.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Order</h3>
+                        <p>요소들의 배치 순서를 정할 수 있습니다</p>
+                    </section>
+
+                    <section>
+                        <h3 style="font-family:monospace">display:flex</h3>
+                        <div class="sample_flexbox_wrap" style="margin:1.2em 20px 0">
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                        <p style="margin-top:1.2em">플렉스박스는 컨테이너 태그와 아이템 태그로 나뉩니다</p>
+<style>
+.sample_flexbox_wrap{display:flex;height:10em;padding:0.9em!important;border:0.5em solid #000!important}
+.sample_flexbox_wrap > div{display:flex;align-items:center;justify-content:center;flex:1;margin-left:0.7em!important;border:0.2em solid #929292;font-size:2em}
+.sample_flexbox_wrap > div:first-child{margin-left:0!important}
+</style>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_tree.png" style="border:none;box-shadow:none" alt=""></p>
+                    </section>
+
+                    <section>
+                        <div class="code_wrap">
+                        <div class="code_view" id="liveCode1">
+                        </div>
+                        <div class="code_frame tab_code">
+                        <label for="liveCode1_1">HTML</label>
+                        <label for="liveCode1_2">CSS</label>
+                        <input type="radio" name="liveCode1" id="liveCode1_1" checked="checked">
+                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode1" contenteditable>&lt;ul&gt;
+  &lt;li&gt;I'm First&lt;/li&gt;
+  &lt;li&gt;I'm Second&lt;/li&gt;
+  &lt;li&gt;I'm Third&lt;/li&gt;
+  &lt;li&gt;I'm Fourth&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+
+                        <input type="radio" name="liveCode1" id="liveCode1_2">
+                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode1" contenteditable>ul{}</code></pre>
+                        </div>
+                        </div>
+<style>
+#liveCode1 li{padding:10px;list-style:none;margin-bottom:10px;text-align:center} 
+#liveCode1 li:nth-child(1){border:0.2em solid #222}
+#liveCode1 li:nth-child(2){border:0.2em solid #444}
+#liveCode1 li:nth-child(3){border:0.2em solid #666}
+#liveCode1 li:nth-child(4){border:0.2em solid #888}
+</style>
+                    </section>
+
+                    <section>
+                        <h3>추천 사이트</h3>
+                        <p style="margin-top:1.5em">CSS Trick : <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">http://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p>
+                        <p style="margin-top:1.2em">Stephen Hay : <a href="http://www.slideshare.net/stephenhay/flexbox-one-giant-leap-for-web-layout-brea-2013" target="_blank">http://www.slideshare.net/stephenhay/flexbox-one-giant-leap-for-web-layout-brea-2013</a></p>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3 style="margin-bottom:30px">1. 내비게이션</h3>
+                    </section>
+
+                    <section>
+			<ul>
+			<li>AS-IS : <a href="http://codepen.io/korearice/pen/rsgyG" target="_blank">http://codepen.io/korearice/pen/rsgyG</a></li>
+			<li>TO-BE : <a href="http://codepen.io/korearice/pen/uKoeL" target="_blank">http://codepen.io/korearice/pen/uKoeL</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3 style="margin-bottom:30px">2. 채팅창</h3>
+                    </section>
+
+                    <section>
+			<ul>
+			<li>AS-IS : <a href="http://codepen.io/korearice/pen/fKjpx" target="_blank">http://codepen.io/korearice/pen/fKjpx</a></li>
+			<li>TO-BE : <a href="http://codepen.io/korearice/pen/nGczj" target="_blank">http://codepen.io/korearice/pen/nGczj</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>3. 접힘/펼침메뉴</h3>
+                    </section>
+
+                    <section>
+			<ul>
+			<li>AS-IS : <a href="http://codepen.io/korearice/pen/GvnEF" target="_blank">http://codepen.io/korearice/pen/GvnEF</a></li>
+			<li>TO-BE : <a href="http://codepen.io/korearice/pen/kgHrG" target="_blank">http://codepen.io/korearice/pen/kgHrG</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>4. 페이지 레이아웃</h3>
+                    </section>
+
+                    <section>
+			<ul>
+			<li>AS-IS : <a href="http://codepen.io/korearice/pen/dlGhc" target="_blank">http://codepen.io/korearice/pen/dlGhc</a></li>
+			<li>TO-BE : <a href="http://codepen.io/korearice/pen/IEuCs" target="_blank">http://codepen.io/korearice/pen/IEuCs</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>5. 데이터 테이블 소팅</h3>
+                    </section>
+
+                    <section>
+			<ul>
+			<li><a href="http://codepen.io/korearice/pen/CDasF" target="_blank">http://codepen.io/korearice/pen/CDasF</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <p>플렉스박스를 더욱 풍부하게 쓰려면?</p>
+                        <h3 class="fragment visible" style="font-family:monospace">flex-wrap:wrap</h3>
+                    </section>
+
+                    <section>
+                        <p style="font-family:monospace">flex-wrap:nowrap</p>
+                        <div class="sample_flexwrap1">
+                            <div class="item1">A</div>
+                            <div class="item1">B</div>
+                            <div class="item1">C</div>
+                            <div class="item1">D</div>
+                        </div>
+
+                        <p style="font-family:monospace">flex-wrap:wrap</p>
+                        <div class="sample_flexwrap2">
+                            <div class="item1">一</div>
+                            <div class="item1">二</div>
+                            <div class="item1">三</div>
+                            <div class="item1">四</div>
+                        </div>
+
+                        <p style="font-family:monospace">flex-wrap:wrap-reverse</p>
+                        <div class="sample_flexwrap3">
+                            <div class="item1">四</div>
+                            <div class="item1">三</div>
+                            <div class="item1">二</div>
+                            <div class="item1">一</div>
+                        </div>
+<style>
+div[class^="sample_flexwrap"]{display:flex;margin:10px 20px 30px;padding:10px;background:#444;border-radius:0.3em}
+div[class^="sample_flexwrap"] div{display:flex;align-items:center;justify-content:center;margin-left:10px;background:#888;border-radius:0.3em;color:#fff}
+div[class^="sample_flexwrap"] div:last-child{margin-right:0}
+.sample_flexwrap1{height:70px}
+.sample_flexwrap1 div{flex:1}
+.sample_flexwrap2{height:170px;flex-wrap:wrap}
+.sample_flexwrap2 div{flex-basis:31%}
+.sample_flexwrap2 div:nth-child(4){margin-top:10px;flex-basis:100%}
+.sample_flexwrap3{height:170px;flex-wrap:wrap}
+.sample_flexwrap3 div{flex-basis:31%}
+.sample_flexwrap3 div:nth-child(4){margin-top:10px;flex-basis:100%}
+</style>
+                    </section>
+
+                    <section>
+                        <p><img src="img/img_pinterest.png" style="width:50%;border:0;box-shadow:none;border-radius:15px"></p>
+                        <p>Masonry layout?</p>
+                        <p>Usually say <span style="font-size:1.5em">"Pinterest layout"</span></p>
+                    </section>
+
+                    <section>
+			<ul>
+			<li>AS-IS : <a href="http://codepen.io/korearice/pen/kFqtD" target="_blank">http://codepen.io/korearice/pen/kFqtD</a></li>
+			<li>TO-BE : <a href="http://codepen.io/korearice/pen/LFvwd/" target="_blank">http://codepen.io/korearice/pen/LFvwd/</a></li>
+			</ul>
+                    </section>
+                </section>
+
+                <section>
+                    <p><img src="img/img_caniuse.png" style="border:0;box-shadow:none"></p>
+                </section>
+
+                <section>
+                    <h3 style="margin-bottom:1em">플렉스박스 크로스브라우징</h3>
+                        <pre class="live_html"><code class="language-markup" contenteditable style="font-size:1.2em;line-height:1.5em">
+.page-wrap {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+ }
+                        </code></pre>
+                </section>
+
+                <section>
+                    <h3>또 다른 레이아웃 알고리즘</h3>
+                </section>
+
+                <section>
+                    <section>
+                    <p><img src="img/img_grid1.png" style="border:0;box-shadow:none"></p>
+                    </section>
+
+                    <section>
+                    <p><img src="img/img_grid2.png" style="border:0;box-shadow:none"></p>
+                    </section>
+
+                    <section>
+                    <p><img src="img/img_grid.png" style="border:0;box-shadow:none"></p>
+                    </section>
+                </section>
+
+                <section>
+                    <h3 style="margin-bottom:1.2em">플렉서블 레이아웃이란?</h3>
+                    <ul>
+                    <li>px, em, %등등...사이즈 계산을 최소화는 것</li>
+                    <li>레이아웃을 알고리즘화 하는 것 </li>
+                    <li>다양한 환경에 UI를 최적화 하는 것</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <p><img src="img/img_book2.jpg" style="border:none;box-shadow:none" alt=""></p>
+                </section>
+
+                <section>
+                    <p><img src="img/img_thanks.png" style="border:none;box-shadow:none" alt=""></p>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+                width: '100%',
+                height: '100%',
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'js/fullscreen-img.js' },
+                    { src: 'plugin/live-coding/live-coding.js', async: true, condition: function() { return !!document.body.classList; }}
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
