@@ -132,7 +132,7 @@ ul, ol, div, p {
 	left: 0 !important;
 	top: 0 !important;
 	margin: 0 !important;
-	padding: 2cm 2cm 0 2cm !important;
+	padding: 0 !important;
 	box-sizing: border-box !important;
 
 	opacity: 1 !important;
@@ -188,3 +188,5 @@ ul, ol, div, p {
 .reveal small a {
 	font-size: 16pt !important;
 }
+.slides section.pdf-content{display:flex!important;flex-dierection:column;align-items:center}
+.slides section.pdf-content > div{width:100%}
