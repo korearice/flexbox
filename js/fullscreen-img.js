@@ -35,12 +35,14 @@ function fullscreen(event) {
     }
     else {
       document.body.style.backgroundSize = "cover";
+      document.getElementsByClassName("img_credit_main")[0].style.display="block";
     }
   }
   else { 
     if(typeof BGR != "undefined") { 
       document.body.style.backgroundImage = "none";
       document.body.style.background      = BGR;
+      document.getElementsByClassName("img_credit_main")[0].style.display="none";
     } 
   }
 }

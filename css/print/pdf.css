@@ -190,3 +190,4 @@ ul, ol, div, p {
 }
 .slides section.pdf-content{display:flex!important;flex-dierection:column;align-items:center}
 .slides section.pdf-content > div{width:100%}
+.list_style_type1 li{margin-bottom:0;line-height:inherit}

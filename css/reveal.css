@@ -81,9 +81,9 @@ body {
 	line-height: 1;
 }
 
-.reveal h1 { font-size: 3.75em; }
-.reveal h2 { font-size: 2.11em;	}
-.reveal h3 { font-size: 1.55em;	}
+.reveal h1 { font-size: 3.75em; font-weight: 600}
+.reveal h2 { font-size: 2.11em; font-weight: 600}
+.reveal h3 { font-size: 1.55em;	font-weight: 600}
 .reveal h4 { font-size: 1em;	}
 
 
@@ -1889,4 +1889,6 @@ div.code_view ul,div.code_view ol{display:block;margin:0}
 .tab_code pre{visibility:hidden}
 .tab_code input{position:absolute;visibility:hidden;}
 .tab_code input:checked + pre{z-index:15;visibility:visible}
-.img_credit{font-style:italic;font-size:10px!important}
+.img_credit{margin:-20px 0 50px!important;font-size:12px!important}
+.img_credit_main{z-index:100;position:relative;display:none;margin:-20px 0 0 0!important;padding:0 0 0 10px;background-color:rgba(0,0,0,.05);text-align:right;font-size:12px!important;color:#444;line-height:1.5;text-align:left}
+.list_style_type1 li{margin-bottom:12px;line-height:1.4}

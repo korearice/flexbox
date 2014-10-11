@@ -52,15 +52,9 @@ window.onload=function(){
 				<section class="pdf-content"><div>
                     <div style="padding:1.2em 0.5em 0.5em;background:rgba(255,255,255,0.75)">
                         <h1 style="font-size:3.5em">Flexible Layout</h1>
-                        <h3>플렉스박스로 할 수 있는것들?</h3>
+                        <h3>CSS3.0 Flexbox를 활용한 레이아웃</h3>
                         <p>
                             <small>Created by <a href="#">UIT개발실</a> / <a href="mailto:kyounghwan.min@nhn.com">MinKyoungHwan</a></small>
-                        </p>
-                        <p style="text-align:right;font-size:0.4em;color:#D72E2B">이 발표자료는 크롬브라우저/1280*800 해상도에 최적화 되있습니다</p>
-                    </div>
-                    <div style="width:17em;margin:0.5em auto;padding:0.5em 0.2em 0.2em;border-radius:15px;background:rgba(0,0,0,0.8);color:#fff">
-                        <p style="font-size:0.4em;line-height:1.5;text-align:left;padding-left:10px;">1. 화면은 방향키로 이동할 수 있습니다.<br>&nbsp;&nbsp;&nbsp;&nbsp;메인 콘텐츠는 방향키 '좌/우(↑/↓)', 서브 콘텐츠는 방향키 '위/아래(↑/↓)'로 이동가능합니다<br>
-                        2. full 화면은 'f'키를 눌러주세요
                         </p>
                     </div>
 				</div></section>
@@ -84,14 +78,14 @@ window.onload=function(){
 				<!-- Example of nested vertical slides -->
 				<section class="pdf-content"><div>
                     <h3 style="margin:0.8em 0 0.5em">레이아웃을 만든다는것은?</h3>
-                    <img src="img/img_building2.jpg" width="40%" style="border:none;border-radius:15px" alt="">
-<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/37803129@N00/2436481628/">@yakobusan Jakob Montrasio 孟亚柯</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+                    <p><img src="img/img_building2.jpg" width="40%" style="border:none;border-radius:15px" alt=""></p>
+                    <p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/37803129@N00/2436481628/">@yakobusan Jakob Montrasio 孟亚柯</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
 				</div></section>
 
 				<section class="pdf-content"><div>
                     <p><img src="img/img_order.jpg" width="40%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
 		    <p class="img_credit" style="margin:-20px 0 20px">Photo Credit: <a href="https://www.flickr.com/photos/12836528@N00/2872535662/">kevin dooley</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
-					<ul style="margin:0 50px">
+					<ul class="list_style_type1" style="margin:0 50px">
 						<li>3단 레이아웃에 가운데 정렬로 해주세요. 네이버 메인처럼...</li>
 						<li>푸터는 항상 하단에 고정시켜주시구요</li>
 						<li>좌측 메뉴의 너비값은 20%인데 해상도가 1000px이상이면<br>200px로 고정시켜주세요.</li>
@@ -101,7 +95,7 @@ window.onload=function(){
 
                     <section class="pdf-content"><div>
                         <h3>CSS 2.1</h3>
-                        <ul style="margin-top:0.5em;font-family:monospace">
+                        <ul class="list_style_type1" style="margin-top:0.5em;font-family:monospace">
                             <li>Grid Layout</li>
                             <li>float:left; position:absolute;</li>
                             <li>display:inline-block; display:table-cell;</li>
@@ -111,10 +105,10 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_devices2.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
-			<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/38869431@N00/12601505044/">juhansonin</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+                        <p><img src="img/img_devices3.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/28195181@N00/8091234505/">tribehut</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by-sa/2.0/">cc</a></p>
                         <h3 style="margin-top:0.5em">다양한 환경에 최적화 되는 UI</h3>
-                        <ul style="margin-top:0.5em">
+                        <ul class="list_style_type1" style="margin-top:0.5em">
                             <li>모바일에선 박스가 좌측, 태블릿에선 우측 상단에 붙어야해요...</li>
                             <li>텍스트 길이에 맞춰 박스가 늘어날 순 없을까요?</li>
                             <li>성능최적화 좀 해주시구요...</li>
@@ -123,10 +117,10 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_ux.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
-			<p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/38869431@N00/12601505044/">juhansonin</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
+                        <p><img src="img/img_ux3.png" width="40%" style="max-width:50%;border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/73978954@N00/4325067780/">NathanaelBC</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">cc</a></p>
                         <h3 style="margin-top:0.5em">혁신적인 UI</h3>
-                        <ul style="margin-top:0.5em">
+                        <ul class="list_style_type1" style="margin-top:0.5em">
                             <li>단순하면서 임팩트 있고 좀 고급스러워보였으면 좋겠어요...</li>
                             <li>웹표준, 웹접근성은 기본인거 아시죠?</li>
                             <li style="color:#ccc">...</li>
@@ -141,7 +135,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_css3_1.png" style="border:none;box-shadow:none" alt=""></p>
+                        <p><img src="img/img_css3_1.png" style="width:70%;border:none;box-shadow:none" alt=""></p>
                     </div></section>
 
                     <section class="pdf-content"><div>
@@ -172,19 +166,21 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_three.jpg" width="50%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <p><img src="img/img_three2.png" width="43%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/41288453@N02/9474667044/">jeff o_o</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a></p>
                         <h3>플렉스박스 장점 3가지</h3>
-                        <ul>
-                        <li>Available space</li>
+                        <ul class="list_style_type1">
+                        <li>Direction</li>
                         <li>Alignment</li>
-                        <li>Order</li>
+                        <li>Ordering</li>
+                        <li>Flexibility</li>
                         </ul>
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_space.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
-                        <h3>Available space</h3>
-                        <p>활용할 수 있는 공간을 자동으로 계산합니다</p>
+                        <p><img src="img/img_direction.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Direction</h3>
+                        <p>요소들의 배치 방향을 손쉽게 설정할 수 있습니다</p>
                     </div></section>
 
                     <section class="pdf-content"><div>
@@ -195,8 +191,14 @@ window.onload=function(){
 
                     <section class="pdf-content"><div>
                         <p><img src="img/img_order.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
-                        <h3>Order</h3>
+                        <h3>Ordering</h3>
                         <p>요소들의 배치 순서를 정할 수 있습니다</p>
+                    </div></section>
+
+                    <section class="pdf-content"><div>
+                        <p><img src="img/img_space.png" width="45%" style="border:none;box-shadow:none;border-radius:15px" alt=""></p>
+                        <h3>Flexibility</h3>
+                        <p>활용할 수 있는 공간을 자동으로 계산합니다</p>
                     </div></section>
 
                     <section class="pdf-content"><div>
@@ -215,36 +217,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-                        <p><img src="img/img_tree.png" style="border:none;box-shadow:none" alt=""></p>
-                    </div></section>
-
-                    <section class="pdf-content"><div>
-                        <div class="code_wrap">
-                        <div class="code_view" id="liveCode1">
-                        </div>
-                        <div class="code_frame tab_code">
-                        <label for="liveCode1_1">HTML</label>
-                        <label for="liveCode1_2">CSS</label>
-                        <input type="radio" name="liveCode1" id="liveCode1_1" checked="checked">
-                        <pre class="live_html"><code class="liveCoding language-markup" data-livecoding-id="liveCode1" contenteditable>&lt;ul&gt;
-  &lt;li&gt;I'm First&lt;/li&gt;
-  &lt;li&gt;I'm Second&lt;/li&gt;
-  &lt;li&gt;I'm Third&lt;/li&gt;
-  &lt;li&gt;I'm Fourth&lt;/li&gt;
-&lt;/ul&gt;
-                        </code></pre>
-
-                        <input type="radio" name="liveCode1" id="liveCode1_2">
-                        <pre class="live_css"><code class="liveCoding language-css" data-livecoding-id="liveCode1" contenteditable>ul{}</code></pre>
-                        </div>
-                        </div>
-<style>
-#liveCode1 li{padding:10px;list-style:none;margin-bottom:10px;text-align:center} 
-#liveCode1 li:nth-child(1){border:0.2em solid #222}
-#liveCode1 li:nth-child(2){border:0.2em solid #444}
-#liveCode1 li:nth-child(3){border:0.2em solid #666}
-#liveCode1 li:nth-child(4){border:0.2em solid #888}
-</style>
+                        <p><img src="img/img_tree.png" style="width:70%;border:none;box-shadow:none" alt=""></p>
                     </div></section>
 
                     <section class="pdf-content"><div>
@@ -260,7 +233,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-			<ul>
+			<ul class="list_style_type1">
 			<li>AS-IS : <a href="http://codepen.io/korearice/pen/rsgyG" target="_blank">http://codepen.io/korearice/pen/rsgyG</a></li>
 			<li>TO-BE : <a href="http://codepen.io/korearice/pen/uKoeL" target="_blank">http://codepen.io/korearice/pen/uKoeL</a></li>
 			</ul>
@@ -273,7 +246,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-			<ul>
+			<ul class="list_style_type1">
 			<li>AS-IS : <a href="http://codepen.io/korearice/pen/fKjpx" target="_blank">http://codepen.io/korearice/pen/fKjpx</a></li>
 			<li>TO-BE : <a href="http://codepen.io/korearice/pen/nGczj" target="_blank">http://codepen.io/korearice/pen/nGczj</a></li>
 			</ul>
@@ -286,7 +259,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-			<ul>
+			<ul class="list_style_type1">
 			<li>AS-IS : <a href="http://codepen.io/korearice/pen/GvnEF" target="_blank">http://codepen.io/korearice/pen/GvnEF</a></li>
 			<li>TO-BE : <a href="http://codepen.io/korearice/pen/kgHrG" target="_blank">http://codepen.io/korearice/pen/kgHrG</a></li>
 			</ul>
@@ -299,7 +272,7 @@ window.onload=function(){
                     </div></section>
 
                     <section class="pdf-content"><div>
-			<ul>
+			<ul class="list_style_type1">
 			<li>AS-IS : <a href="http://codepen.io/korearice/pen/dlGhc" target="_blank">http://codepen.io/korearice/pen/dlGhc</a></li>
 			<li>TO-BE : <a href="http://codepen.io/korearice/pen/IEuCs" target="_blank">http://codepen.io/korearice/pen/IEuCs</a></li>
 			</ul>
@@ -321,7 +294,7 @@ window.onload=function(){
                 <section>
                     <section class="pdf-content"><div>
                         <p>플렉스박스를 더욱 풍부하게 쓰려면?</p>
-                        <h3 class="fragment visible" style="font-family:monospace">flex-wrap:wrap</h3>
+                        <h3 class="fragment visible" style="font-family:monospace;font-weight:400">flex-wrap:wrap</h3>
                     </div></section>
 
                     <section class="pdf-content"><div>
@@ -370,7 +343,7 @@ div[class^="sample_flexwrap"] div:last-child{margin-right:0}
                     </div></section>
 
                     <section class="pdf-content"><div>
-			<ul>
+			<ul class="list_style_type1">
 			<li>AS-IS : <a href="http://codepen.io/korearice/pen/kFqtD" target="_blank">http://codepen.io/korearice/pen/kFqtD</a></li>
 			<li>TO-BE : <a href="http://codepen.io/korearice/pen/LFvwd/" target="_blank">http://codepen.io/korearice/pen/LFvwd/</a></li>
 			</ul>
@@ -378,7 +351,7 @@ div[class^="sample_flexwrap"] div:last-child{margin-right:0}
                 </section>
 
                 <section class="pdf-content"><div>
-                    <p><img src="img/img_caniuse.png" style="border:0;box-shadow:none"></p>
+                    <p><img src="img/img_caniuse.png" style="width:70%;border:0;box-shadow:none"></p>
                 </div></section>
 
                 <section class="pdf-content"><div>
@@ -400,21 +373,21 @@ div[class^="sample_flexwrap"] div:last-child{margin-right:0}
 
                 <section>
                     <section class="pdf-content"><div>
-                    <p><img src="img/img_grid1.png" style="border:0;box-shadow:none"></p>
+                    <p><img src="img/img_grid1.png" style="width:70%;border:0;box-shadow:none"></p>
                     </div></section>
 
                     <section class="pdf-content"><div>
-                    <p><img src="img/img_grid2.png" style="border:0;box-shadow:none"></p>
+                    <p><img src="img/img_grid2.png" style="width:70%;border:0;box-shadow:none"></p>
                     </div></section>
 
                     <section class="pdf-content"><div>
-                    <p><img src="img/img_grid.png" style="border:0;box-shadow:none"></p>
+                    <p><img src="img/img_grid.png" style="width:70%;border:0;box-shadow:none"></p>
                     </div></section>
                 </section>
 
                 <section class="pdf-content"><div>
                     <h3 style="margin-bottom:1.2em">플렉서블 레이아웃이란?</h3>
-                    <ul>
+                    <ul class="list_style_type1">
                     <li>px, em, %등등...사이즈 계산을 최소화는 것</li>
                     <li>레이아웃을 알고리즘화 하는 것 </li>
                     <li>다양한 환경에 UI를 최적화 하는 것</li>
@@ -422,7 +395,8 @@ div[class^="sample_flexwrap"] div:last-child{margin-right:0}
                 </div></section>
 
                 <section class="pdf-content"><div>
-                    <p><img src="img/img_book2.jpg" style="border:none;box-shadow:none" alt=""></p>
+                    <p><img src="img/img_book3.png" style="border:none;box-shadow:none" alt=""></p>
+                    <p class="img_credit">Photo Credit: <a href="https://www.flickr.com/photos/39420384@N05/4377329715/">Veribatim</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
                 </div></section>
 
                 <section class="pdf-content"><div>
@@ -468,6 +442,6 @@ div[class^="sample_flexwrap"] div:last-child{margin-right:0}
 			});
 
 		</script>
-
+    <p class="img_credit_main">Photo Credit: <a href="https://www.flickr.com/photos/10361931@N06/4273103337/">Horia Varlan</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by/2.0/">cc</a></p>
 	</body>
 </html>
