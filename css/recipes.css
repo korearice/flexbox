@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import "http://fonts.googleapis.com/css?family=Sansita+One";
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input[type=number] { width: 35px; }
+
+.recipe-wrap{height:100%;}
+
+#calendar {
+    color: white;
+    background: #68a;
+    line-height: 1;
+}
+
+.tit_recipes {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    background: #68a;
+}
+
+.tit_recipes h1 {
+    background: url(../img/recipe-icon.png) -35px center no-repeat;
+    color: white;
+    font-weight: normal;
+    height: 120px;
+    padding:0 0 10px 140px!important;
+    margin: 0;
+    font-family: Sansita One, serif;
+    text-shadow: 2px 2px 3px rgba(30,60,90,.5);
+    text-align:left;
+    line-height:1;
+}
+.tit_recipes h1 > span {
+    display: block;
+}
+
+h1 > span.recipe { font-size: 60px; }
+h1 > span.planner { font-size: 60px; }
+
+.recipe-container{
+   background:#68a;
+}
+
+.recipes {
+   -webkit-column-width: 160px;
+   padding:10px 0 0!important;
+   list-style: none;
+   color: black;
+   width:96%;
+   margin:0 auto!important
+}
+
+.recipes li {
+   background: #bdf;
+   border-radius: 4px;
+   box-shadow: 2px 2px rgba(30,60,90,.5);
+   font-size: 40%;
+   margin: .5em 3px .5em 0;
+   padding: 2px;
+   -webkit-transition: background-color .2s;
+   cursor: move;
+   -webkit-user-select: none;
+   user-select: none;
+   line-height:1.2;
+}
+.recipes li:first-child {
+   margin-top: 0;
+}
+
+#week {
+   border-collapse: collapse;
+   width: 96%;
+   margin: 0 auto;
+}
+
+
+#week th {
+    font-size:50%;
+    text-align:center;
+}
+
+#week td {
+   width: 14%;
+   padding-bottom: 1.5em;
+   border: 1px solid black;
+   background: #eef;
+   font-size:40%;
+   color: black;
+}
+#week td.breakfast {
+   border-bottom: 1px dotted gray;
+}
+#week td.lunch {
+   border-top: 1px dotted gray;
+   border-bottom: 1px dotted gray;
+}
+#week td.dinner {
+   border-top: 1px dotted gray;
+}
+
+#week td.over {
+   outline: thick dashed gray;
+}
+
+.close {
+   font-size: 10px;
+   padding: 1px 3px 2px;
+   border-radius: 100%;
+   border: 2px solid gray;
+   background: white;
+   cursor: pointer;
+   -webkit-user-select: none;
+   float: right;
+   margin: 2px;
+}
