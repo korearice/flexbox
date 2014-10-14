@@ -1,14 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@font-face{ font-family: bebas; font-weight:normal; src:url('../../fonts/BebasNeue.otf');}
-@font-face{ font-family: novecento; font-weight:normal; src:url('../../fonts/Novecentosanswide-DemiBold.otf');}
-@font-face{ font-family: novecento; font-weight:bold; src:url('../../fonts/Novecentosanswide-Bold.otf');}
+/*
 @font-face{ font-family: daum; font-weight:normal; src:url('../../fonts/Daum_Regular.ttf');}
 @font-face{ font-family: daum; font-weight:bold; src:url('../../fonts/Daum_SemiBold.ttf');}
+@font-face{ font-family: monaco; src:url('../../fonts/MONACO.TTF');}
+*/
 @font-face{ font-family: nanum; font-weight:normal; src:url('../../fonts/NanumGothic.ttf');}
 @font-face{ font-family: nanum; font-weight:bold; src:url('../../fonts/NanumGothicBold.ttf');}
 @font-face{ font-family: nanum_bold; src:url('../../fonts/NanumGothicBold.ttf');}
-@font-face{ font-family: monaco; src:url('../../fonts/MONACO.TTF');}
+@font-face{ font-family: monospace; src:url('../../fonts/monospace.ttf');}
 /**
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
@@ -21,7 +19,9 @@
  *********************************************/
 body {
   background: white;
-  background-color: white; }
+  background-color: white;
+  cursor:url(../../img/ico_lazer3.png),auto;
+}
 
 .reveal {
   font-family: 'nanum', 'Daum', daum, sans-serif;
@@ -147,3 +147,8 @@ body {
 
 .reveal .visual-img {position:relative;overflow:hidden}
 .reveal .visual-img img{position:absolute;top:0;left:0;width:100%;border:0}
+::-webkit-scrollbar {width:9px;}
+::-webkit-scrollbar-track{-webkit-border-radius:5px;border-radius:5px;background:rgba(0,0,0,0.1);}
+::-webkit-scrollbar-thumb{-webkit-border-radius:5px;border-radius:5px;background:rgba(0,0,0,0.2);}
+::-webkit-scrollbar-thumb:hover{background:rgba(0,0,0,0.4);}
+::-webkit-scrollbar-thumb:window-inactive{background:rgba(0,0,0,0.05);}
